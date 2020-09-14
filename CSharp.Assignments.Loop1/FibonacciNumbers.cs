@@ -10,7 +10,7 @@ namespace CSharp.Assignments.Loop1
     /// </summary>
     public class FibonacciNumbers
     {
-        public static int FibonacciNumbers(int n)
+        public static int FibonacciNumber(int n)
         {
             int p = 0;
             int q = 1;
@@ -33,7 +33,7 @@ namespace CSharp.Assignments.Loop1
             Console.Write("\n The Fibonacci series of {0} terms is : ", n1);
             for (int i = 0; i < n1; i++)
             {
-                Console.Write("{0} ", FibonacciNumbers(i));
+                Console.Write("{0} ", FibonacciNumber(i));
             }
             Console.ReadKey();
         }
