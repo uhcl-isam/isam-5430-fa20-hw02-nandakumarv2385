@@ -10,32 +10,32 @@ namespace CSharp.Assignments.Loop1
     /// </summary>
     public class FibonacciNumbers
     {
-        public static int FibonacciNumber(int n)
+        public static int Fibo(int nno)
         {
-            int p = 0;
-            int q = 1;
+            int num1 = 0;
+            int num2 = 1;
+
+            for (int i = 0; i < nno; i++)
+            {
+                int temp = num1;
+                num1 = num2;
+                num2 = temp + num2;
+            }
+            return num1;
+        }
+        public static void Main()
+        {
+            Console.Write("\n\nFunction : To display the n number Fibonacci series :\n");
+            Console.Write("------------------------------------------------------------\n");
+            Console.Write("Input number of Fibonacci Series : ");
+            int n = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("The Fibonacci series of " + n + " numbers is :");
             for (int i = 0; i < n; i++)
             {
-                int temp = p;
-                p = q;
-                q = temp + q;
+                Console.Write(Fibo(i) + "  ");
             }
-            return p;
-        }
-
-        static void Main()
-        {
-            Console.WriteLine("\n\n Recursion : Find the Fibonacci numbers for a n numbers of series :");
-            Console.WriteLine("-----------------------------------------------------------------------");
-
-            Console.Write(" Input number of terms for the Fibonacci series : ");
-            int n1 = Convert.ToInt32(Console.ReadLine());
-            Console.Write("\n The Fibonacci series of {0} terms is : ", n1);
-            for (int i = 0; i < n1; i++)
-            {
-                Console.Write("{0} ", FibonacciNumber(i));
-            }
-            Console.ReadKey();
+            Console.WriteLine();
         }
     }
 }
