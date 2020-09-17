@@ -29,7 +29,6 @@ namespace CSharp.Assignments.Loop1
             Console.Write("------------------------------------------------------------\n");
             Console.Write("Input number of Fibonacci Series : ");
             int n = Convert.ToInt32(Console.ReadLine());
-
             Console.WriteLine("The Fibonacci series of " + n + " numbers is :");
             for (int i = 0; i < n; i++)
             {
