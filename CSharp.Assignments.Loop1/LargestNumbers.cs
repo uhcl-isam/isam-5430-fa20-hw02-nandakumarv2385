@@ -24,6 +24,30 @@ namespace CSharp.Assignments.Loop1
         {
             // get first number and assign it to variable largest
             // write your codes here
-        }
+            int a, b = 0, lar, k, n;
+                lar = Convert.ToInt32(Console.ReadLine());
+                k = 1;
+                n = int.MinValue;
+
+                while (k < 10)
+                {
+                    a = Convert.ToInt32(Console.ReadLine());
+                    if (a > lar)
+                    {
+                        n = lar;
+                        lar = a;
+
+
+                    }
+                    else if (a > n)
+                    {
+                        n = a;
+                    }
+
+                    k++;
+                }
+                Console.WriteLine(lar);
+                Console.WriteLine(n);
+            }
     }
 }

@@ -27,10 +27,25 @@ namespace CSharp.Assignments.Loop1
         {
             Console.Write("Enter the number of rows: ");
             int num = int.Parse(Console.ReadLine());
+            int n, m;
             Console.WriteLine("Enter the fill character: ");
             char fillChar = Char.Parse(Console.ReadLine());
-
-            // Write your codes here.
+            for (n = 0; n < num; n++)
+            {
+                for (m = 0; m < num; m++)
+                {
+                    if (n % 2 == 1)
+                        Console.Write(" " + fillChar);
+                    else
+                        Console.Write(fillChar + " ");
+                }
+                Console.Write(Environment.NewLine);
+            }
+            // Write your codes here.*/
+            /*    string inputs;
+               inputs= Console.ReadLine();
+                if(inputs == null) { Console.WriteLine("ctrl+z pressed "); }
+    else { Console.WriteLine("anything else is pressed"); }*/
         }
     }
 }

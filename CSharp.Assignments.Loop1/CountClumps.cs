@@ -16,7 +16,54 @@ namespace CSharp.Assignments.Loop1
     {
         public static void Main()
         {
-            // Write your codes here
+            int a, b = 0, sum = 0;
+            string input, n;
+            int j = 0;
+            
+            input = Console.ReadLine();
+
+            if (input == null)
+            {
+                Console.WriteLine("Ctrl has been pressed");
+                sum = 0;
+            }
+            else
+            {
+                a = Convert.ToInt32(input);
+                while (true)
+                {
+                    n = Console.ReadLine();
+                    if (n == null)
+                    {
+                        Console.WriteLine("Ctrl has been pressed");
+
+                        break;
+                    }
+                    else
+                    {
+
+                        j = Convert.ToInt32(n);
+
+                        if (a == b)
+                        {
+                            if (j == 0)
+                            {
+                                sum++;
+                                j++;
+                            }
+                        }
+                        else
+                        {
+
+                            j = 0;
+
+                        }
+                        a = b;
+                    }
+                }
+            }
+
+            Console.WriteLine(sum);
         }
     }
 }

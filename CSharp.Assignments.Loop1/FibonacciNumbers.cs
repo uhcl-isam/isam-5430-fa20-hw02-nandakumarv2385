@@ -10,31 +10,40 @@ namespace CSharp.Assignments.Loop1
     /// </summary>
     public class FibonacciNumbers
     {
-        public static int Fibo(int nno)
-        {
-            int num1 = 0;
-            int num2 = 1;
-
-            for (int i = 0; i < nno; i++)
-            {
-                int temp = num1;
-                num1 = num2;
-                num2 = temp + num2;
-            }
-            return num1;
-        }
         public static void Main()
         {
-            Console.Write("\n\nFunction : To display the n number Fibonacci series :\n");
-            Console.Write("------------------------------------------------------------\n");
-            Console.Write("Input number of Fibonacci Series : ");
-            int n = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("The Fibonacci series of " + n + " numbers is :");
-            for (int i = 0; i < n; i++)
+            Console.WriteLine("Enter the last number of Fibonacci Sequence of numbers.");
+            int end = int.Parse(Console.ReadLine());
+            int i, j, k;
+            if (end <= 0)
             {
-                Console.Write(Fibo(i) + "  ");
+                Console.WriteLine("0");
             }
-            Console.WriteLine();
+            else if (end == 1)
+            {
+                Console.WriteLine("0 1 1");
+            }
+            else
+            {
+                i = 0;
+                Console.WriteLine(i);
+                j = 1;
+                Console.WriteLine(j);
+
+                k = i + j;
+                Console.WriteLine(k);
+                while (k < end)
+                {
+
+                    i = k + j;
+                    if (i <= end)
+                        Console.WriteLine(i);
+
+                    j = k;
+                    k = i;
+
+                }
+            }
         }
     }
 }

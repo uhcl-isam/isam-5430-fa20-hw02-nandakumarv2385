@@ -27,6 +27,37 @@ namespace CSharp.Assignments.Loop1
         {
             // read in account number
             // Enter your sentinel loop here
+           
+            int acnum, bg, Charg, tcredt, credlmt, netbl;
+
+            while (true)
+            {
+                acnum = Convert.ToInt32(Console.ReadLine());
+                if (acnum < 0)
+                {
+
+                    break;
+
+                }
+
+                bg = Convert.ToInt32(Console.ReadLine());
+                Charg = Convert.ToInt32(Console.ReadLine());
+                tcredt = Convert.ToInt32(Console.ReadLine());
+                credlmt = Convert.ToInt32(Console.ReadLine());
+
+
+
+                netbl = bg + Charg - tcredt;
+                Console.WriteLine(netbl);
+                if (netbl > credlmt)
+                {
+
+                    Console.WriteLine("Credit limit exceeded");
+                }
+
+
+
+            }
         }
     }
 }

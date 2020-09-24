@@ -31,6 +31,78 @@ namespace CSharp.Assignments.Loop1
 
             // Write your codes here.
             Console.ReadLine();
+
+           int i, j;
+            switch (t)
+            {
+                case 'a':
+                    {
+                        for (i = 0; i < n; i++)
+                        {
+                            for (j = 0; j <= i; j++)
+                            {
+                                Console.Write("*");
+                            }
+                            Console.Write(Environment.NewLine);
+                        }
+                        break;
+
+                    }
+                case 'b':
+                    {
+                        for (i = n; i > 0; i--)
+                        {
+
+                            for (j = 0; j < i; j++)
+                            {
+                                Console.Write("*");
+                            }
+                            Console.Write(Environment.NewLine);
+                        }
+                        break;
+
+                    }
+                case 'c':
+                    {
+                        for (i = n; i > 0; i--)
+
+                        {
+                            for (j = n; j > 0; j--)
+                            {
+                                if (i < j)
+                                    Console.Write(" ");
+                                else
+                                    Console.Write("*");
+                            }
+                            Console.Write(Environment.NewLine);
+                        }
+
+                        break;
+
+
+                    }
+                case 'd':
+                    {
+                        for (i = 1; i <= n; i++)
+
+                        {
+                            for (j = n; j > 0; j--)
+                            {
+                                if (j <= i)
+                                    Console.Write("*");
+                                else
+                                    Console.Write(" ");
+                            }
+                            Console.Write(Environment.NewLine);
+                        }
+
+                        break;
+
+
+                    }
+                default:
+                    break;
+            }
         }
     }
 }
